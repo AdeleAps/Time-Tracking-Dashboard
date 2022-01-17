@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Time Tracking Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">  
+</head>
+
+<body>
+<div class="content">
+  <div class="sidebar">
+   <div class="profile">
+     <img src="./images/image-jeremy.png" alt="User Image">
+     <p class="small-text"> Report for</p>
+     <h1 class="name"> Jeremy Robson</h1>
+     </div>
+   <div class="time-span">
+    <button class="tablinks" onclick="openStats(event,'daily')">Daily</button>
+    <button class="tablinks" onclick="openStats(event,'weekly')" id="defaultOpen">Weekly</button>
+    <button class="tablinks" onclick="openStats(event,'monthly')">Monthly</button>
+  </div>
+  </div>
+  <div>
+  <div id="weekly" class="tabcontent default grid">
+    <div class="work grid-box">
+      <div class="color-element">
+        <img class="icon" src="./images/icon-work.svg" alt="Icon">
+      </div>
+      <div class="stats-box">
+        <div class="title-dots"> 
+          <span>Work</span>
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+        </div>
+      <div>
+          <div>
+            <h2>32hrs</h2>
+            <p class="previous">Last week - 36hrs</p>
+          </div>
+      </div>
+      </div>
+    </div>
+      <div class="play grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-play.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Play</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>10hrs</h2>
+              <p class="previous">Last week - 36hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="study grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-study.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Study</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>4hrs</h2>
+              <p class="previous">Last week - 7hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="exercise grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-exercise.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Exercise</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>4hrs</h2>
+              <p class="previous">Last week - 5hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="social grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-social.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Social</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>5hrs</h2>
+              <p class="previous">Last week - 10hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="self-care grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-self-care.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Self Care</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>2hrs</h2>
+              <p class="previous">Last week - 2hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+  </div>
+  <div id="daily" class="tabcontent grid">
+    <div class="work grid-box">
+      <div class="color-element">
+        <img class="icon" src="./images/icon-work.svg" alt="Icon">
+      </div>
+      <div class="stats-box">
+        <div class="title-dots"> 
+          <span>Work</span>
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+        </div>
+      <div>
+          <div>
+            <h2>5hrs</h2>
+            <p class="previous">Yesterday - 7hrs</p>
+          </div>
+      </div>
+      </div>
+    </div>
+      <div class="play grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-play.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Play</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>1hr</h2>
+              <p class="previous">Yesterday - 2hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="study grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-study.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Study</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>0hrs</h2>
+              <p class="previous">Yesterday - 1hr</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="exercise grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-exercise.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Exercise</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>1hr</h2>
+              <p class="previous">Yesterday - 1hr</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="social grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-social.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Social</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>1hr</h2>
+              <p class="previous">Yesterday - 3hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="self-care grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-self-care.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Self Care</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>0hrs</h2>
+              <p class="previous">Yesterday - 1hr</p>
+            </div>
+        </div>
+        </div>
+      </div>
+  </div>
+  <div id="monthly" class="tabcontent grid">
+    <div class="work grid-box">
+      <div class="color-element">
+        <img class="icon" src="./images/icon-work.svg" alt="Icon">
+      </div>
+      <div class="stats-box">
+        <div class="title-dots"> 
+          <span>Work</span>
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+        </div>
+      <div>
+          <div>
+            <h2>103hrs</h2>
+            <p class="previous">Last month - 128hrs</p>
+          </div>
+      </div>
+      </div>
+    </div>
+      <div class="play grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-play.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Play</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>23hrs</h2>
+              <p class="previous">Last month - 29hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="study grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-study.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Study</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>13hrs</h2>
+              <p class="previous">Last month - 19hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="exercise grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-exercise.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Exercise</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>11hrs</h2>
+              <p class="previous">Last month - 18hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="social grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-social.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Social</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>21hrs</h2>
+              <p class="previous">Last month - 23hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="self-care grid-box">
+        <div class="color-element">
+          <img class="icon" src="./images/icon-self-care.svg" alt="Icon">
+        </div>
+        <div class="stats-box">
+          <div class="title-dots"> 
+            <span>Self Care</span>
+            <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        <div>
+            <div>
+              <h2>7hrs</h2>
+              <p class="previous">Last month - 11hrs</p>
+            </div>
+        </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a> 
+    Coded by <a href="https://github.com/AdeleAps">Adele Apsīte.✨</a>
+</div>
+</body>
+</html>
