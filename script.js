@@ -1,24 +1,53 @@
-function openStats(evt, time) {
-  // Declare all variables
-  let i, tabcontent, tablinks;
+// hides & shows tabs
 
-  // Get all elements with class="tabcontent" and hide them
+function openStats(event, time) {
+  let i, tabcontent;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("active", "");
- }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(time).style.display = "grid";
-  evt.currentTarget.className += "active";
 }
 
+// higlights active tab
+
+let buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", function () {
+    buttons.forEach(btn => btn.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+
+// opens the default tab on load
+
 document.getElementById("defaultOpen").click();
+
+// fetches JSON data
+
+fetch("data.json")
+  .then(response => response.json())
+  .then(json => console.log(json));
+  
+// displays JSON data (work in progress)
+
+// let mainTime = document.querySelectorAll(".js-time");
+// let daily = document.getElementById("daily");
+// let weekly = document.getElementById("weekly");
+// let monthly = document.getElementById("monthly");
+
+
+// daily.addEventListener("click", displayDaily);
+// weekly.addEventListener("click", displayWeekly);
+// monthly.addEventListener("click", displayMonthly);
+
+
+// function displayWeekly() {
+//   mainTime[0].innerHTML =` <h2>${data[0].timeframes.weekly.current + 'hrs'} </h2>
+//   <p>${'Last Week - '+ data[0].timeframes.weekly.previous + 'hrs'} </p> `
+// }
+
+// window.onload = displayWeekly;
 
 
