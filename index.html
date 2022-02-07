@@ -7,6 +7,7 @@
   <title>Time Tracking Dashboard</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script type="text/javascript" src="data.json"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">  
@@ -27,7 +28,7 @@
   </div>
   </div>
   <div>
-  <div id="weekly" class="tabcontent default grid">
+  <div id="weekly" class="tabcontent grid">
     <div class="work grid-box">
       <div class="color-element">
         <img class="icon" src="./images/icon-work.svg" alt="Icon">
@@ -38,9 +39,7 @@
           <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
         </div>
       <div>
-          <div>
-            <h2>32hrs</h2>
-            <p class="previous">Last week - 36hrs</p>
+          <div class="js-time">
           </div>
       </div>
       </div>
@@ -55,9 +54,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>10hrs</h2>
-              <p class="previous">Last week - 36hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -72,9 +69,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>4hrs</h2>
-              <p class="previous">Last week - 7hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -89,9 +84,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>4hrs</h2>
-              <p class="previous">Last week - 5hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -106,9 +99,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>5hrs</h2>
-              <p class="previous">Last week - 10hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -123,9 +114,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>2hrs</h2>
-              <p class="previous">Last week - 2hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -142,9 +131,7 @@
           <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
         </div>
       <div>
-          <div>
-            <h2>5hrs</h2>
-            <p class="previous">Yesterday - 7hrs</p>
+          <div class="js-time">
           </div>
       </div>
       </div>
@@ -159,9 +146,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>1hr</h2>
-              <p class="previous">Yesterday - 2hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -176,9 +161,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>0hrs</h2>
-              <p class="previous">Yesterday - 1hr</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -193,9 +176,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>1hr</h2>
-              <p class="previous">Yesterday - 1hr</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -210,9 +191,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>1hr</h2>
-              <p class="previous">Yesterday - 3hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -227,9 +206,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>0hrs</h2>
-              <p class="previous">Yesterday - 1hr</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -246,9 +223,7 @@
           <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
         </div>
       <div>
-          <div>
-            <h2>103hrs</h2>
-            <p class="previous">Last month - 128hrs</p>
+          <div class="js-time">
           </div>
       </div>
       </div>
@@ -263,9 +238,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>23hrs</h2>
-              <p class="previous">Last month - 29hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -280,9 +253,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>13hrs</h2>
-              <p class="previous">Last month - 19hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -297,9 +268,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>11hrs</h2>
-              <p class="previous">Last month - 18hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -314,9 +283,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>21hrs</h2>
-              <p class="previous">Last month - 23hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -331,9 +298,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis">
           </div>
         <div>
-            <div>
-              <h2>7hrs</h2>
-              <p class="previous">Last month - 11hrs</p>
+            <div class="js-time">
             </div>
         </div>
         </div>
@@ -346,3 +311,5 @@
 </div>
 </body>
 </html>
+
+
