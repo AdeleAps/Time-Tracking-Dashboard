@@ -26,7 +26,6 @@ document.getElementById("defaultOpen").click();
 
 // fetches JSON data and displays it
 
-
 function appendData(timeFrame) {
   let mainInfo = document.createElement('h2');
   let previousInfo = document.createElement('p');
@@ -75,64 +74,64 @@ $(document).ready(function(){
     let dailyWork = document.getElementById("daily-work");
     appendData(dailyWork);
     dailyWork.children[0].textContent = data[0].timeframes.daily.current+"hrs";
-    dailyWork.children[1].textContent = "Last week - " + data[0].timeframes.daily.previous + "hrs";
+    dailyWork.children[1].textContent = "Yesterday - " + data[0].timeframes.daily.previous + "hrs";
 
     let dailyPlay = document.getElementById("daily-play");
     appendData(dailyPlay);
     dailyPlay.children[0].textContent = data[1].timeframes.daily.current+"hrs";
-    dailyPlay.children[1].textContent = "Last week - " + data[1].timeframes.daily.previous + "hrs";
+    dailyPlay.children[1].textContent = "Yesterday - " + data[1].timeframes.daily.previous + "hrs";
 
     let dailyStudy = document.getElementById("daily-study");
     appendData(dailyStudy);
     dailyStudy.children[0].textContent = data[2].timeframes.daily.current+"hrs";
-    dailyStudy.children[1].textContent = "Last week - " + data[2].timeframes.daily.previous + "hrs";
+    dailyStudy.children[1].textContent = "Yesterday - " + data[2].timeframes.daily.previous + "hrs";
     
     let dailyExercise = document.getElementById("daily-exercise");
     appendData(dailyExercise);
     dailyExercise.children[0].textContent = data[3].timeframes.daily.current+"hrs";
-    dailyExercise.children[1].textContent = "Last week - " + data[3].timeframes.daily.previous + "hrs";
+    dailyExercise.children[1].textContent = "Yesterday - " + data[3].timeframes.daily.previous + "hrs";
 
     let dailySocial = document.getElementById("daily-social");
     appendData(dailySocial);
     dailySocial.children[0].textContent = data[4].timeframes.daily.current+"hrs";
-    dailySocial.children[1].textContent = "Last week - " + data[4].timeframes.daily.previous + "hrs";
+    dailySocial.children[1].textContent = "Yesterday - " + data[4].timeframes.daily.previous + "hrs";
 
     let dailySelfCare = document.getElementById("daily-self-care");
     appendData(dailySelfCare);
     dailySelfCare.children[0].textContent = data[5].timeframes.daily.current+"hrs";
-    dailySelfCare.children[1].textContent = "Last week - " + data[5].timeframes.daily.previous + "hrs";
+    dailySelfCare.children[1].textContent = "Yesterday - " + data[5].timeframes.daily.previous + "hrs";
 
     // monthly
 
     let monthlyWork = document.getElementById("monthly-work");
     appendData(monthlyWork);
     monthlyWork.children[0].textContent = data[0].timeframes.monthly.current+"hrs";
-    monthlyWork.children[1].textContent = "Last week - " + data[0].timeframes.monthly.previous + "hrs";
+    monthlyWork.children[1].textContent = "Last month - " + data[0].timeframes.monthly.previous + "hrs";
 
     let monthlyPlay = document.getElementById("monthly-play");
     appendData(monthlyPlay);
     monthlyPlay.children[0].textContent = data[1].timeframes.monthly.current+"hrs";
-    monthlyPlay.children[1].textContent = "Last week - " + data[1].timeframes.monthly.previous + "hrs";
+    monthlyPlay.children[1].textContent = "Last month - " + data[1].timeframes.monthly.previous + "hrs";
 
     let monthlyStudy = document.getElementById("monthly-study");
     appendData(monthlyStudy);
     monthlyStudy.children[0].textContent = data[2].timeframes.monthly.current+"hrs";
-    monthlyStudy.children[1].textContent = "Last week - " + data[2].timeframes.monthly.previous + "hrs";
+    monthlyStudy.children[1].textContent = "Last month - " + data[2].timeframes.monthly.previous + "hrs";
     
     let monthlyExercise = document.getElementById("monthly-exercise");
     appendData(monthlyExercise);
     monthlyExercise.children[0].textContent = data[3].timeframes.monthly.current+"hrs";
-    monthlyExercise.children[1].textContent = "Last week - " + data[3].timeframes.monthly.previous + "hrs";
+    monthlyExercise.children[1].textContent = "Last month - " + data[3].timeframes.monthly.previous + "hrs";
 
     let monthlySocial = document.getElementById("monthly-social");
     appendData(monthlySocial);
     monthlySocial.children[0].textContent = data[4].timeframes.monthly.current+"hrs";
-    monthlySocial.children[1].textContent = "Last week - " + data[4].timeframes.monthly.previous + "hrs";
+    monthlySocial.children[1].textContent = "Last month - " + data[4].timeframes.monthly.previous + "hrs";
 
     let monthlySelfCare = document.getElementById("monthly-self-care");
     appendData(monthlySelfCare);
     monthlySelfCare.children[0].textContent = data[5].timeframes.monthly.current+"hrs";
-    monthlySelfCare.children[1].textContent = "Last week - " + data[5].timeframes.monthly.previous + "hrs";
+    monthlySelfCare.children[1].textContent = "Last month - " + data[5].timeframes.monthly.previous + "hrs";
     
   }).fail(function(){
       console.log("An error has occurred.");
